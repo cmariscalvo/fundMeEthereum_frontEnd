@@ -4,17 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fund Me App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:active {
+            background-color: #004085;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    Fund Me App
-    <script src="./index.js" type="module">
-    </script>
-    <button id="connectButton" onclick="connect()"> Connect </button>
-    <button id="balanceButton">getBalance</button>
-    <button id="withdrawButton">Withdraw</button>
-    <label>Withdraw amount</label>
-    <button id="fundButton" onclick="fund()">Fund</button>
-    <label>ETH Amount</label>
-    <input id='ethAmount' placeholder="0.1"/>
+    <div class="container">
+        <h1>Fund Me App</h1>
+        <button id="connectButton" onclick="connect()">Connect</button>
+        <button id="balanceButton">Get Balance</button>
+        <button id="withdrawButton">Withdraw</button>
+        <div>
+            <label for="withdrawAmount">Withdraw amount</label>
+            <input id="withdrawAmount" placeholder="0.1" />
+        </div>
+        <div>
+            <button id="fundButton" onclick="fund()">Fund</button>
+            <label for="ethAmount">ETH Amount</label>
+            <input id='ethAmount' placeholder="0.1" />
+        </div>
+    </div>
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
